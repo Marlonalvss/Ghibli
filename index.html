@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Ghibli</title>
+    <link rel="icon" href="./src/Studio_Ghibli_Logo.0.jpg" type="image/jpeg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="main.js" defer></script>
+    <style>
+        body {
+            background-image: url('./src/Spirited-Away-1242023.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+
+<body class="bg-[url(src/Spirited-Away-1242023.png)] bg-fixed bg-gray-100 text-gray-800 transition-all duration-300">
+
+    <header class="dark:bg-gray-800/70 text-white p-6 text-center flex flex-col items-center relative">
+        <div class="absolute top-4 left-4">
+            <img src="./src/Studio_Ghibli_Logo.0.jpg" alt="Ghibli Logo" class="h-16 cursor-pointer rounded-lg"
+                onclick="window.location.reload();">
+        </div>
+        <h1 class="text-5xl font-bold tracking-widest mt-14">Ghibli World</h1>
+        <p class="text-xl mt-2">Studio Ghibli films and immerse yourself in magical stories.</p>
+    </header>
+    
+
+
+    <section id="filters" class=" flex justify-center items-center">
+      <div class="flex justify-center p-4 w-full flex-wrap gap-4">
+            <input type="text" id="search" class="px-4 py-2 rounded-lg max-w-xs w-full" placeholder="Search..." aria-label="Search Movies">
+            <select id="year-filter" class="px-4 py-2 rounded-lg max-w-xs w-full" aria-label="Filter by Year">
+                <option value="">Year</option>
+            </select>
+            <select id="director-filter" class="px-4 py-2 rounded-lg max-w-xs w-full" aria-label="Filter by Director">
+                <option value="">Director</option>
+            </select>
+            <select id="sort-filter" class="px-4 py-2 rounded-lg max-w-xs w-full" aria-label="Filter by Sort">
+                <option value="">Sort by</option>
+                <option value="newest">Newest</option>
+                <option value="oldest">Oldest</option>
+            </select>
+            
+        </div>
+        
+    </section>
+
+    <section id="filmes" class="p-8">
+        <div id="movie-list" class="grid items-start grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        </div>
+    </section>
+
+    <footer class="bg-gray-800/70 text-white text-center p-4">
+        <p>&copy; 2025 All rights reserved | Studies from Marlon Alves</p>
+    </footer>
+
+</body>
+
+</html>
