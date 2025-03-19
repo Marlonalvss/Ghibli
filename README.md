@@ -3,6 +3,10 @@
 
 **Ghibli World** é um projeto que exibe filmes do Studio Ghibli, permitindo que os usuários filtrem filmes por título, ano de lançamento e diretor. A aplicação oferece uma experiência interativa com informações detalhadas sobre cada filme, como descrição, diretor, produtor e tempo de execução.
 
+# Teste Aqui
+
+[Ghibli Site](https://marlonalvss.github.io/Ghibli/) 🌎
+
 ## 🚀 Funcionalidades
 
 - **Filtros de Pesquisa**: Filtros interativos para pesquisar filmes por título, ano de lançamento e diretor.
