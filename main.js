@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const inputTitle = document.getElementById('search');
     const inputDirector = document.getElementById('director-filter');
     const movieList = document.getElementById('movie-list');
-    const sortFilter = document.getElementById('sort-filter'); // Referência ao select de ordenação
+    const sortFilter = document.getElementById('sort-filter'); 
 
     let allMovies = [];
 
@@ -28,16 +28,13 @@ document.addEventListener('DOMContentLoaded', () => {
     function renderMovies() {
         movieList.innerHTML = '';
 
-        // Ordenar os filmes com base na seleção do filtro de ordenação
         const sortedMovies = [...allMovies];
 
         if (sortFilter.value === 'newest') {
-            sortedMovies.sort((a, b) => b.release_date - a.release_date); // Ordena do mais recente para o mais antigo
+            sortedMovies.sort((a, b) => b.release_date - a.release_date);
         } else if (sortFilter.value === 'oldest') {
-            sortedMovies.sort((a, b) => a.release_date - b.release_date); // Ordena do mais antigo para o mais recente
+            sortedMovies.sort((a, b) => a.release_date - b.release_date); 
         }
-
-        // Filtra os filmes com base nos filtros de ano, diretor e título
         sortedMovies.forEach(movie => {
             const matchesYear = !inputYear.value || movie.release_date === inputYear.value;
             const matchesDirector = !inputDirector.value || movie.director === inputDirector.value;
@@ -78,9 +75,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Adicionando os event listeners
     inputYear.addEventListener('change', renderMovies);
     inputDirector.addEventListener('change', renderMovies);
     inputTitle.addEventListener('input', renderMovies);
-    sortFilter.addEventListener('change', renderMovies); // Ouve a mudança no select de ordenação
+    sortFilter.addEventListener('change', renderMovies); 
 });
